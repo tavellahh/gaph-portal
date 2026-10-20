@@ -1,0 +1,189 @@
+/* ------------------------------------------------------------ identidad */
+:root{
+  --negro:#121212;
+  --negro-2:#1d1d1d;
+  --rojo:#b2362b;
+  --rojo-claro:#d8483a;
+  --gris:#6f6f6f;
+  --gris-claro:#e6e4e1;
+  --fondo:#f5f3f0;
+  --blanco:#ffffff;
+  --verde:#2e7d4f;
+  --ambar:#b07f1a;
+  --azul:#3d4e8c;
+  --radio:14px;
+  --sombra:0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.07);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--negro);
+  font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;line-height:1.2;letter-spacing:-.01em}
+button{font:inherit;cursor:pointer}
+a{color:var(--rojo)}
+.oculto{display:none !important}
+
+.aviso{background:#2b2b2b;color:#f1efec;text-align:center;font-size:13px;padding:8px 16px;letter-spacing:.02em}
+.aviso b{color:#ffb4a8}
+
+/* -------------------------------------------------------------- ingreso */
+.ingreso{
+  min-height:calc(100vh - 37px);display:flex;align-items:center;justify-content:center;padding:24px 16px;
+  background:radial-gradient(900px 500px at 50% -10%, #2a2a2a 0%, transparent 60%), var(--negro);
+}
+.ingreso-caja{width:100%;max-width:390px;text-align:center;color:#fff}
+.ingreso-caja img{width:112px;height:112px;border-radius:50%;margin-bottom:20px}
+.ingreso-caja h1{font-size:23px;margin-bottom:6px}
+.ingreso-caja p.sub{color:#a6a19c;font-size:14px;margin:0 0 26px}
+.campo{text-align:left;margin-bottom:14px}
+.campo label{display:block;font-size:12.5px;color:#bdb8b3;margin-bottom:6px;letter-spacing:.03em;text-transform:uppercase}
+.campo input,.campo select{
+  width:100%;padding:13px 14px;border-radius:10px;border:1px solid #3a3a3a;background:#1b1b1b;color:#fff;font-size:16px;
+}
+.campo input:focus,.campo select:focus{outline:2px solid var(--rojo-claro);outline-offset:1px;border-color:transparent}
+.btn{
+  width:100%;padding:14px;border:0;border-radius:10px;background:var(--rojo);color:#fff;
+  font-weight:600;font-size:16px;transition:background .15s;
+}
+.btn:hover{background:var(--rojo-claro)}
+.btn.chico{width:auto;padding:11px 20px;font-size:14.5px}
+.btn.gris{background:#e9e6e2;color:#333}
+.btn.gris:hover{background:#dedad5}
+.huella{
+  margin-top:20px;padding-top:18px;border-top:1px solid #333;color:#8f8a86;font-size:13.5px;
+  display:flex;align-items:center;gap:10px;justify-content:center;
+}
+.huella svg{width:22px;height:22px;fill:#8f8a86;flex:none}
+.demo{margin-top:22px;background:#191919;border:1px dashed #3d3d3d;border-radius:10px;padding:13px 14px;font-size:12.5px;color:#9b9691;text-align:left}
+.demo b{color:#d9d4cf;display:block;margin-bottom:8px;font-weight:600}
+.demo .fila{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.demo .fila span{flex:1}
+.demo code{color:#e0bdb7}
+.demo button{background:none;border:1px solid #3d3d3d;border-radius:6px;color:#e0bdb7;padding:3px 9px;font-size:12px}
+.demo button:hover{border-color:#6b5450;color:#f0d2cc}
+.error{color:#ff9d90;font-size:13.5px;margin:12px 0 0;min-height:20px}
+
+/* --------------------------------------------------------------- barra */
+header.barra{background:var(--negro);color:#fff;padding:12px 18px;display:flex;align-items:center;gap:12px}
+header.barra img{width:38px;height:38px;border-radius:50%}
+header.barra .quien{flex:1;min-width:0}
+header.barra .quien strong{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header.barra .quien span{font-size:12.5px;color:#a6a19c}
+header.barra button{background:#2c2c2c;border:0;color:#ded9d4;border-radius:8px;padding:8px 13px;font-size:13.5px}
+header.barra button:hover{background:#3a3a3a}
+.rol{
+  display:inline-block;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:700;
+  padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:1px;
+}
+.rol.alumno{background:#333;color:#cfcac5}
+.rol.profesor{background:#2f4536;color:#a9d8bb}
+.rol.admin{background:#4a2420;color:#ffb4a8}
+
+nav.pestanas{background:var(--negro-2);display:flex;gap:2px;padding:0 10px;overflow-x:auto;scrollbar-width:none}
+nav.pestanas::-webkit-scrollbar{display:none}
+nav.pestanas button{
+  background:none;border:0;color:#9b9691;padding:13px 14px;font-size:14.5px;
+  border-bottom:3px solid transparent;white-space:nowrap;
+}
+nav.pestanas button.activa{color:#fff;border-bottom-color:var(--rojo)}
+
+main{max-width:980px;margin:0 auto;padding:20px 16px 56px}
+.titulo{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--gris);margin:26px 0 10px}
+.titulo:first-child{margin-top:4px}
+
+/* ------------------------------------------------------------ tarjetas */
+.tarjeta{background:var(--blanco);border-radius:var(--radio);box-shadow:var(--sombra);padding:18px;margin-bottom:14px}
+.tarjeta.quieta{background:#fbfaf9;box-shadow:none;border:1px solid var(--gris-claro)}
+.tarjeta h3{font-size:17px;margin-bottom:3px}
+.tarjeta .meta{color:var(--gris);font-size:13.5px;margin:0}
+.grilla{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.dato{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:4px 0 2px}
+.dato.chico{font-size:23px}
+.dato small{font-size:14px;font-weight:500;color:var(--gris);letter-spacing:0}
+
+.chip{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12.5px;font-weight:600}
+.chip.ok{background:#e3f1e8;color:var(--verde)}
+.chip.mora{background:#fae3e0;color:var(--rojo)}
+.chip.beca{background:#e7eaf5;color:var(--azul)}
+.chip.gris{background:var(--gris-claro);color:#555}
+.chip.aviso{background:#fdf0dc;color:#8a6410}
+
+.barra-prog{height:9px;background:var(--gris-claro);border-radius:999px;overflow:hidden;margin:10px 0 6px}
+.barra-prog i{display:block;height:100%;background:var(--negro);border-radius:999px}
+.barra-prog i.flojo{background:var(--rojo)}
+
+.alerta{background:#fdf3e7;border-left:4px solid var(--ambar);border-radius:8px;padding:13px 15px;font-size:14px;margin-bottom:14px;color:#6b4e12}
+.alerta b{color:#5a4110}
+.alerta.roja{background:#fdecea;border-left-color:var(--rojo);color:#7d2a21}
+.alerta.roja b{color:#6a231b}
+
+/* --------------------------------------------------------------- listas */
+ul.lista{list-style:none;margin:0;padding:0}
+ul.lista li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--gris-claro);font-size:14.5px}
+ul.lista li:last-child{border-bottom:0}
+ul.lista li .fecha{width:94px;color:var(--gris);font-size:13.5px;flex:none}
+ul.lista li .texto{flex:1;min-width:0}
+.punto{width:9px;height:9px;border-radius:50%;flex:none}
+.punto.presente{background:var(--verde)}
+.punto.ausente{background:var(--rojo)}
+.punto.justificada{background:var(--ambar)}
+.punto.futura{background:#cfcbc7}
+
+/* --------------------------------------------------------------- tablas */
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);font-weight:600;padding:0 10px 9px 0;white-space:nowrap}
+td{padding:11px 10px 11px 0;border-top:1px solid var(--gris-claro);vertical-align:middle}
+td.num,th.num{text-align:right;padding-right:0}
+td.nowrap{white-space:nowrap}
+tr.clic{cursor:pointer}
+tr.clic:hover td{background:#faf9f8}
+
+dl.datos{margin:0;display:grid;grid-template-columns:135px 1fr;gap:9px 14px;font-size:14.5px}
+dl.datos dt{color:var(--gris)}
+dl.datos dd{margin:0}
+
+/* --------------------------------------------------- toma de asistencia */
+.pasada{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--gris-claro)}
+.pasada:last-child{border-bottom:0}
+.pasada .nombre{flex:1;min-width:0;font-size:15px}
+.pasada .nombre small{display:block;color:var(--gris);font-size:12.5px}
+.marca{border:1px solid var(--gris-claro);background:var(--blanco);border-radius:9px;padding:7px 13px;font-size:13.5px;font-weight:600;min-width:104px;text-align:center}
+.marca.presente{background:#e3f1e8;border-color:#bfe0cc;color:var(--verde)}
+.marca.ausente{background:#fae3e0;border-color:#efc7c1;color:var(--rojo)}
+.marca.justificada{background:#fdf0dc;border-color:#ecd8b2;color:#8a6410}
+
+/* ------------------------------------------------------------ formulario */
+.form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.form label{display:block;font-size:12.5px;color:var(--gris);margin-bottom:5px}
+.form input,.form select{
+  width:100%;padding:11px 12px;border:1px solid var(--gris-claro);border-radius:9px;font-size:15px;background:var(--blanco);
+}
+.form .ancho{grid-column:1/-1}
+.buscador{
+  width:100%;padding:12px 14px;border:1px solid var(--gris-claro);border-radius:10px;
+  font-size:15px;margin-bottom:12px;background:var(--blanco);
+}
+
+/* ------------------------------------------------------------- reportes */
+.barras{display:grid;gap:12px}
+.barras .fila-b{display:grid;grid-template-columns:1fr 46px;gap:10px;align-items:center;font-size:14px}
+.barras .pista{height:22px;background:var(--gris-claro);border-radius:6px;overflow:hidden}
+.barras .pista i{display:block;height:100%;background:var(--negro)}
+.barras .pista i.flojo{background:var(--rojo)}
+.barras .valor{text-align:right;font-variant-numeric:tabular-nums;color:var(--gris)}
+
+.pie{text-align:center;color:var(--gris);font-size:12.5px;margin-top:34px;line-height:1.7}
+
+@media (max-width:520px){
+  table{font-size:13.5px}
+  th{font-size:11px}
+  dl.datos{grid-template-columns:1fr;gap:2px 0}
+  dl.datos dd{margin-bottom:9px}
+  ul.lista li .fecha{width:78px}
+  .marca{min-width:92px;padding:7px 10px}
+}

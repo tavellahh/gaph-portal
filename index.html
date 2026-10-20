@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal GAPH - Alumnos, Profesores y Administración</title>
+<meta name="description" content="Prototipo del sistema de gestión: cursos, asistencia por huella, cuotas y reportes.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="aviso">Prototipo de demostración &middot; <b>los datos son inventados</b>, no es el sistema real de la escuela</div>
+
+<!-- ============================================================ INGRESO -->
+<section class="ingreso" id="pantallaIngreso">
+  <div class="ingreso-caja">
+    <img src="logo.png" alt="GAPH Talleres Fotográficos">
+    <h1>Portal GAPH</h1>
+    <p class="sub">Talleres Fotográficos &middot; Morón</p>
+
+    <form id="formIngreso" autocomplete="off">
+      <div class="campo">
+        <label for="dni">Número de documento</label>
+        <input id="dni" inputmode="numeric" placeholder="38452109">
+      </div>
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input id="clave" type="password" placeholder="••••••">
+      </div>
+      <button class="btn" type="submit">Entrar</button>
+      <p class="error" id="errorIngreso"></p>
+    </form>
+
+    <div class="huella">
+      <svg viewBox="0 0 24 24"><path d="M12 1a9 9 0 0 0-9 9v2a1 1 0 0 0 2 0v-2a7 7 0 0 1 14 0v2a1 1 0 0 0 2 0v-2a9 9 0 0 0-9-9zm0 4a5 5 0 0 0-5 5v6a1 1 0 0 0 2 0v-6a3 3 0 0 1 6 0v7a1 1 0 0 0 2 0v-7a5 5 0 0 0-5-5zm0 4a1 1 0 0 0-1 1v9a1 1 0 0 0 2 0v-9a1 1 0 0 0-1-1z"/></svg>
+      En la escuela el alumno entra apoyando el dedo en el lector
+    </div>
+
+    <div class="demo">
+      <b>Entrar al prototipo (contraseña: gaph)</b>
+      <div class="fila"><span>Alumna al día &middot; <code>38452109</code></span><button type="button" data-entrar="38452109">entrar</button></div>
+      <div class="fila"><span>Alumno con faltas y deuda &middot; <code>42118760</code></span><button type="button" data-entrar="42118760">entrar</button></div>
+      <div class="fila"><span>Profesora &middot; <code>27345981</code></span><button type="button" data-entrar="27345981">entrar</button></div>
+      <div class="fila"><span>Administradora &middot; <code>20111222</code></span><button type="button" data-entrar="20111222">entrar</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= PORTAL -->
+<div id="pantallaPortal" class="oculto">
+  <header class="barra">
+    <img src="logo.png" alt="">
+    <div class="quien">
+      <strong id="nombreUsuario">—</strong>
+      <span id="dniUsuario">—</span>
+    </div>
+    <button id="btnSalir">Salir</button>
+  </header>
+
+  <nav class="pestanas" id="pestanas"></nav>
+
+  <main>
+    <div id="contenido"></div>
+    <p class="pie">
+      GAPH Talleres Fotográficos &middot; Alte. Brown 782, Morón<br>
+      Dudas de cursada o pagos: WhatsApp 11 6998 6997
+    </p>
+  </main>
+</div>
+
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
